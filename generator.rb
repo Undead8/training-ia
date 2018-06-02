@@ -9,6 +9,6 @@ class RandomGenerator
   end
 
   def self.random_contracts(list_of_clients)
-    list_of_clients.map { |c| Contract.new(c, rand(10000..1000000))}
+    list_of_clients.map { |client| Contract.new(client, rand(10000..1000000))}
   end
 end
