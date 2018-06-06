@@ -11,4 +11,8 @@ class RandomGenerator
   def self.contracts(list_of_clients)
     list_of_clients.map { |client| Contract.new(client, rand(10000..1000000))}
   end
+
+  def self.contracts_from_names(list_of_names, amount = 1000)
+  	contracts(clients(list_of_names, amount))
+  end
 end
